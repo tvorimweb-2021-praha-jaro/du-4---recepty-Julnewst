@@ -1,0 +1,269 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni
+s pribyvajici sirkou pridavame media query pro
+středně široké obrazovky:
+@media (min-width: 480px) {
+}
+široké obrazovky
+@media (min-width: 860px) {
+}
+*/
+
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* ------------------------------- */
+
+.recept-nazev h1 {
+  font-family: 'Raleway';
+  font-weight: 800;
+  font-size: 1.75rem;
+}
+
+.recept-nazev h2 {
+  font-family: 'Raleway';
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+  
+
+.recept-info {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.recept-nazev, p{
+  margin: 0;
+}
+
+
+.recept{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  min-height: 90px;
+  border: 1px solid white;
+  color: white;
+  padding: 0.5rem;
+  background-image: linear-gradient(hsla(0, 0, 0, 0.3), hsla(0, 0, 0, 0.3)), var(--bg-recept);
+  background-size: cover, cover;
+  background-position: center, center;
+  text-shadow: 0 0 4px hsla(0, 0, 0, 0.3);
+}
+
+
+.recept-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.recept-prvni{
+  background-image: url(images/burger.jpg);
+  min-height: 200px;
+}
+  
+.recept-druhy{
+  background-image: url(images/sushi.jpg);
+}
+
+.recept-treti{
+  background-image: url(images/rajcata.jpg);
+}
+
+.recept-ctvrty{
+  background-image: url(images/kure.jpg);
+}
+
+.recept-paty{
+  background-image: url(images/grilovani.jpg);
+}
+
+
+@media screen and (min-width: 600px) {
+
+
+.recept-nazev h1 {
+   font-size: 2 rem;
+}
+
+.recept-nazev h2 {
+  font-family: 'Raleway';
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+  
+.kontejner{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hlavni{
+  flex: 100%;
+}
+
+.maly{
+display: flex;
+flex-wrap: wrap;
+}
+
+.recept{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  min-height: 150px;
+  border: 1px solid white;
+  color: white;
+  padding: 1.25rem;
+  background-image: linear-gradient(hsla(0, 0, 0, 0.3), hsla(0, 0, 0, 0.3)), var(--bg-recept);
+  background-size: cover, cover;
+  background-position: center, center;
+  text-shadow: 0 0 4px hsla(0, 0, 0, 0.3);
+  flex: 50%;
+}
+
+
+.recept-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recept-prvni{
+  background-image: url(images/burger.jpg);
+  min-height: 250px;
+}
+  
+.recept-druhy{
+  background-image: url(images/sushi.jpg);
+  order: 1;
+}
+
+.recept-treti{
+  background-image: url(images/rajcata.jpg);
+  order: 3;
+}
+
+.recept-ctvrty{
+  background-image: url(images/kure.jpg);
+  order: 2;
+}
+
+.recept-paty{
+  background-image: url(images/grilovani.jpg);
+  order: 4;
+}
+
+
+}
+
+
+@media screen and (min-width: 860px) {
+
+  .recept-nazev h1 {
+    font-size: 3 rem;
+ }
+ 
+ .recept-nazev h2 {
+   font-family: 'Raleway';
+   font-weight: 800;
+   font-size: 1.75rem;
+ }
+   
+ .kontejner{
+   display: flex;
+   flex-wrap: nowrap;
+  }
+ 
+ .hlavni{
+   order: 0;
+   flex: 33%;
+  }
+ 
+ .maly{
+  order: 1;
+  flex: 66%;
+  display: flex;
+ flex-wrap: wrap;
+ align-items: flex-start;
+}
+
+
+ 
+ .recept{
+   display: flex;
+   flex-direction: column-reverse;
+   justify-content: space-between;
+   background-repeat: no-repeat;
+   min-height: 200px;
+   border: 1px solid white;
+   color: white;
+   padding: 1.25rem;
+   background-image: linear-gradient(hsla(0, 0, 0, 0.3), hsla(0, 0, 0, 0.3)), var(--bg-recept);
+   background-size: cover, cover;
+   background-position: center, center;
+   text-shadow: 0 0 4px hsla(0, 0, 0, 0.3);
+   flex: 50%;
+ }
+ 
+ 
+ .recept-info {
+   display: flex;
+   justify-content: space-between;
+ }
+ 
+ .recept-prvni{
+   background-image: url(images/burger.jpg);
+   min-height: 400px;
+ }
+   
+ .recept-druhy{
+   background-image: url(images/sushi.jpg);
+   order: 1;
+ }
+ 
+ .recept-treti{
+   background-image: url(images/rajcata.jpg);
+   order: 3;
+ }
+ 
+ .recept-ctvrty{
+   background-image: url(images/kure.jpg);
+   order: 2;
+ }
+ 
+ .recept-paty{
+   background-image: url(images/grilovani.jpg);
+   order: 4;
+ }
+ 
+ 
+
+}
